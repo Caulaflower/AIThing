@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+	<name>AIThing</name>
+	<author>Baulaflower</author>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<packageId>BaulaFlower.Balls</packageId>
+	<description>Tries to make enemies smarter.</description>
+
+</ModMetaData>

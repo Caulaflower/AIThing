@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RaidStrategyDef ParentName="ImmediateAttack">
+        <defName>MechShturm</defName>
+        <workerClass>YO.MechTactic</workerClass>
+      </RaidStrategyDef>
+
+      <RaidStrategyDef ParentName="BreachingBase">
+        <defName>Shturmoviki</defName>
+        <workerClass>YO.Shturm</workerClass>
+      </RaidStrategyDef>
+
+      <DutyDef>
+        <defName>StormColony</defName>
+        <alwaysShowWeapon>true</alwaysShowWeapon>
+        <thinkNode Class="ThinkNode_Priority">
+          <subNodes>
+            <li Class="YO.JobGiver_ShturmScout"/>
+            <li Class="JobGiver_TakeCombatEnhancingDrug" />
+            <li Class="ThinkNode_Subtree" MayRequire="Ludeon.RimWorld.Biotech">
+              <treeDef>Abilities_Aggressive</treeDef>
+            </li>
+            <li Class="JobGiver_AIFightEnemies">
+              <targetAcquireRadius>65</targetAcquireRadius>
+              <targetKeepRadius>72</targetKeepRadius>
+            </li>
+            <li Class="JobGiver_AITrashColonyClose" />
+            <li Class="JobGiver_AITrashBuildingsDistant" />
+            <li Class="JobGiver_AIGotoNearestHostile" />
+            <li Class="JobGiver_AITrashBuildingsDistant">
+              <attackAllInert>true</attackAllInert>
+            </li>
+            <li Class="JobGiver_AISapper">
+              <canMineNonMineables>false</canMineNonMineables>
+            </li>
+          </subNodes>
+        </thinkNode>
+        <constantThinkNode Class="ThinkNode_ConditionalCanPickupOpportunisticWeapon">
+          <subNodes>
+            <!-- Try to pick up nearby weapons -->
+            <li Class="JobGiver_PickUpOpportunisticWeapon" />
+          </subNodes>
+        </constantThinkNode>
+      </DutyDef>
+</Defs>

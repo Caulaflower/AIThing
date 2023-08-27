@@ -1,0 +1,6 @@
+D:\plepe\steamapps\common\RimWorld\Mods\Funi\Assemblies\YO.dll
+D:\plepe\steamapps\common\RimWorld\Mods\Funi\Assemblies\YO.pdb
+D:\plepe\steamapps\common\RimWorld\Mods\Funi\Source\YO\YO\obj\Debug\YO.csproj.AssemblyReference.cache
+D:\plepe\steamapps\common\RimWorld\Mods\Funi\Source\YO\YO\obj\Debug\YO.csproj.CoreCompileInputs.cache
+D:\plepe\steamapps\common\RimWorld\Mods\Funi\Source\YO\YO\obj\Debug\YO.dll
+D:\plepe\steamapps\common\RimWorld\Mods\Funi\Source\YO\YO\obj\Debug\YO.pdb

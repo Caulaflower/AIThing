@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Heavy"]</xpath>
+		<value>
+			<!-- marks the pawn as the one who shall attack in first wave to destroy line-->
+			<li Class="YO.IsBreacher"/>
+			<!-- makes the pawn request other pawns to escort them-->
+			<li Class="YO.EscorterExt">
+				<!-- not particularly important, but higher = more important, only useful in case of shortage of pawns in which case higher priority ones will first get full guards, then others-->
+				<Priority>5</Priority>
+				<!-- prolly obvious, max count of guardians-->
+				<maxCount>3</maxCount>
+				<!-- True - the pawn needs pawns to guard them -->
+				<RequesterProvider>True</RequesterProvider>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Slasher"]</xpath>
+		<value>
+			<li>
+				<!-- False - the pawn will guard other ones -->
+				<RequesterProvider>False</RequesterProvider>
+			</li>
+		</value>
+	</Operation>
+</Patch>
